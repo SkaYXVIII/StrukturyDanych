@@ -7,7 +7,7 @@ Operations:
 - find value or index
 - build structure from file
 - build structure from random numbers
-- 
+
 Data structures:
 - Array
 - LinkedList (with tail)
