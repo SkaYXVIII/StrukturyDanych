@@ -1,0 +1,424 @@
+        -:    0:Source:C:/Users/barto/CLionProjects/SDIZO/main.cpp
+        -:    0:Graph:C:\Users\barto\CLionProjects\SDIZO\cmake-build-debug-coverage\CMakeFiles\SDIZO.dir\main.cpp.gcno
+        -:    0:Data:C:\Users\barto\CLionProjects\SDIZO\cmake-build-debug-coverage\CMakeFiles\SDIZO.dir\main.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <iostream>
+        -:    2:#include "List.h"
+        -:    3:#include<conio.h>
+        -:    4:#include<string>
+        -:    5:
+        -:    6:using namespace std;
+        -:    7:string root = "C:/Users/barto/CLionProjects/SDIZO/";
+        -:    8:
+function _Z11displayMenuNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:    9:void displayMenu(string info)
+        -:   10:{
+    #####:   11:    cout << endl;
+    %%%%%:   11-block  0
+call    0 never executed
+    #####:   12:    cout << info << endl;
+call    0 never executed
+call    1 never executed
+    #####:   13:    cout << "1.Wczytaj z pliku" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   14:    cout << "2.Usun" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   15:    cout << "3.Dodaj" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   16:    cout << "4.Znajdz" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   17:    cout << "5.Utworz losowo" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   18:    cout << "6.Wyswietl" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   19:    cout << "0.Powrot do menu" << endl;
+call    0 never executed
+call    1 never executed
+    #####:   20:    cout << "Podaj opcje:";
+call    0 never executed
+    #####:   21:}
+function _Z9menu_listv called 0 returned 0% blocks executed 0%
+    #####:   22:void menu_list()
+        -:   23:{
+        -:   24:    char opt;
+    #####:   25:    string fileName;
+    %%%%%:   25-block  0
+call    0 never executed
+        -:   26:    int index, value;
+        -:   27:    List *list;
+    #####:   28:    list = new List;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   28-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   28-block  1
+    $$$$$:   28-block  2
+call    6 never executed
+        -:   29:
+        -:   30:    do{
+    #####:   31:        displayMenu("--- LISTA ---");
+    %%%%%:   31-block  0
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+    %%%%%:   31-block  1
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+    %%%%%:   31-block  2
+call    7 never executed
+call    8 never executed
+    $$$$$:   31-block  3
+call    9 never executed
+    $$$$$:   31-block  4
+    $$$$$:   31-block  5
+call   10 never executed
+    $$$$$:   31-block  6
+    #####:   32:        cin>>opt;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:        cin.sync();
+    %%%%%:   33-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   34:        switch (opt){
+    %%%%%:   34-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+branch  4 never executed
+branch  5 never executed
+branch  6 never executed
+    #####:   35:            case '1': //tutaj wczytytwanie  tablicy z pliku
+    #####:   36:                list->~List();
+    %%%%%:   36-block  0
+call    0 never executed
+    #####:   37:                list = new List;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   37-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   37-block  1
+call    6 never executed
+    #####:   38:                cout << " Podaj nazwe zbioru:";
+    %%%%%:   38-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   39:                cin >> fileName;
+    %%%%%:   39-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   40:                list->fillElementsTakenFromFile(root + fileName);
+    %%%%%:   40-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   40-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   40-block  2
+call    6 never executed
+    $$$$$:   40-block  3
+call    7 never executed
+    $$$$$:   40-block  4
+    #####:   41:                list->display();
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   42:                break;
+    %%%%%:   42-block  0
+        -:   43:
+    #####:   44:            case '2': //tutaj usuwanie elemenu z tablicy
+    #####:   45:                cout << " podaj wartosc:";
+    %%%%%:   45-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:                cin >> value;
+    %%%%%:   46-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   47:                list->remove(value);
+    %%%%%:   47-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   48:                list->display();
+    %%%%%:   48-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   49:                break;
+    %%%%%:   49-block  0
+        -:   50:
+    #####:   51:            case '3': //tutaj dodawanie elemetu do tablicy
+    #####:   52:                cout << " podaj index:";
+    %%%%%:   52-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   53:                cin >> index;
+    %%%%%:   53-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   54:                cout << " podaj wartosc:";
+    %%%%%:   54-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   55:                cin >> value;
+    %%%%%:   55-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   56:                list->addAtTheIndex(value, index);
+    %%%%%:   56-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   57:                list->display();
+    %%%%%:   57-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   58:                break;
+    %%%%%:   58-block  0
+        -:   59:
+    #####:   60:            case '4': //tutaj znajdowanie elemetu w tablicy
+    #####:   61:                cout << " podaj wartosc:";
+    %%%%%:   61-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   62:                cin >> value;
+    %%%%%:   62-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   63:                if (list->find(value))
+    %%%%%:   63-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   63-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:   64:                    cout << "poadana wartosc jest w tablicy";
+    %%%%%:   64-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   65:                else
+    #####:   66:                    cout << "podanej wartosci NIE ma w tablicy";
+    %%%%%:   66-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   67:                break;
+    %%%%%:   67-block  0
+        -:   68:
+    #####:   69:            case '5':  //tutaj generowanie  tablicy
+    #####:   70:                list->~List();
+    %%%%%:   70-block  0
+call    0 never executed
+    #####:   71:                list = new List;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   71-block  0
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   71-block  1
+call    6 never executed
+    #####:   72:                cout << "Podaj ilosc elementów tablicy:";
+    %%%%%:   72-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   73:                cin >> value;
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   74:                list->randomFillList(value);
+    %%%%%:   74-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   75:                list->display();
+    %%%%%:   75-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   76:                break;
+    %%%%%:   76-block  0
+        -:   77:
+    #####:   78:            case '6':  //tutaj wyświetlanie tablicy
+    #####:   79:                list->display();
+    %%%%%:   79-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   80:                break;
+    %%%%%:   80-block  0
+        -:   81:
+        -:   82:        }
+        -:   83:
+    #####:   84:    } while (opt != '0');
+    %%%%%:   84-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:   85:}
+    %%%%%:   85-block  0
+call    0 never executed
+    $$$$$:   85-block  1
+call    1 never executed
+        -:   86:
+function main called 1 returned 0% blocks executed 50%
+        1:   87:int main() {
+        -:   88:    char option;
+        -:   89:    do{
+        1:   90:        cout << endl;
+        1:   90-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91:        cout << "==== MENU GLOWNE ===" << endl;
+        1:   91-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   91-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   92:        cout << "1.Tablica" << endl;
+        1:   92-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   92-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   93:        cout << "2.Lista" << endl;
+        1:   93-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   93-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   94:        cout << "3.Kopiec" << endl;
+        1:   94-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   94-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   95:        cout << "0.Wyjscie" << endl;
+        1:   95-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   95-block  1
+call    3 returned 1
+branch  4 taken 1 (fallthrough)
+branch  5 taken 0 (throw)
+        1:   96:        cout << "Podaj opcje:";
+        1:   96-block  0
+call    0 returned 1
+branch  1 taken 1 (fallthrough)
+branch  2 taken 0 (throw)
+        1:   97:        cin>>option;
+        1:   97-block  0
+call    0 returned 0
+branch  1 taken 0 (fallthrough)
+branch  2 taken 0 (throw)
+    #####:   98:        cin.sync();
+    %%%%%:   98-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   99:        cout << endl;
+    %%%%%:   99-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  100:        switch (option){
+    %%%%%:  100-block  0
+branch  0 never executed
+branch  1 never executed
+branch  2 never executed
+branch  3 never executed
+    #####:  101:            case '1':
+        -:  102://                menu_table();
+    #####:  103:                cout << "jeszcze nie zaimplementowane" << endl;
+    %%%%%:  103-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  103-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  104:                break;
+    %%%%%:  104-block  0
+        -:  105:
+    #####:  106:            case '2':
+    #####:  107:                menu_list();
+    %%%%%:  107-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:  108:                break;
+    %%%%%:  108-block  0
+        -:  109:
+    #####:  110:            case '3':
+        -:  111://                menu_heap();
+    #####:  112:                cout << "jeszcze nie zaimplementowane" << endl;
+    %%%%%:  112-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:  112-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:  113:                break;
+    %%%%%:  113-block  0
+        -:  114:        }
+        -:  115:
+    #####:  116:    } while (option != '0');
+    %%%%%:  116-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  117:
+    #####:  118:}
+    %%%%%:  118-block  0
+    %%%%%:  118-block  1

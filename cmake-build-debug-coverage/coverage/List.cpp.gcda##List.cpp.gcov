@@ -1,0 +1,552 @@
+        -:    0:Source:C:/Users/barto/CLionProjects/SDIZO/List.cpp
+        -:    0:Graph:C:\Users\barto\CLionProjects\SDIZO\cmake-build-debug-coverage\CMakeFiles\SDIZO.dir\List.cpp.gcno
+        -:    0:Data:C:\Users\barto\CLionProjects\SDIZO\cmake-build-debug-coverage\CMakeFiles\SDIZO.dir\List.cpp.gcda
+        -:    0:Runs:1
+        -:    1:#include <windows.h>
+        -:    2:#include "List.h"
+        -:    3:#include <cstdlib>
+        -:    4:
+function _ZN4ListC2Ev called 0 returned 0% blocks executed 0%
+    #####:    5:List::List() {
+    #####:    6:    tail = NULL;
+    #####:    7:    head = NULL;
+    #####:    8:    numberOfElements = 0;
+    #####:    9:}
+        -:   10:
+function _ZN4ListD2Ev called 0 returned 0% blocks executed 0%
+    #####:   11:List::~List(){
+        -:   12:    ElemList *elem;
+    #####:   13:    while (head != NULL)
+    %%%%%:   13-block  0
+    %%%%%:   13-block  1
+branch  0 never executed
+branch  1 never executed
+        -:   14:    {
+    #####:   15:        elem = head -> next;
+    #####:   16:        delete head;
+    %%%%%:   16-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   16-block  1
+call    2 never executed
+    #####:   17:        head = elem;
+    %%%%%:   17-block  0
+        -:   18:    }
+    #####:   19:    numberOfElements = 0;
+    #####:   20:}
+function _ZN4List12startCounterEv called 0 returned 0% blocks executed 0%
+    #####:   21:void List::startCounter() {
+        -:   22:    LARGE_INTEGER li;
+    #####:   23:    if (!QueryPerformanceFrequency(&li))
+    %%%%%:   23-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   23-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:   24:        cout << "QueryPerformanceFrequency failed!\n";
+    %%%%%:   24-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   25:
+    #####:   26:    PCFreq = double(li.QuadPart) / 1000.0;
+        -:   27:
+    #####:   28:    QueryPerformanceCounter(&li);
+    %%%%%:   28-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   29:    counterStart = li.QuadPart;
+    #####:   30:}
+    %%%%%:   30-block  0
+        -:   31:
+function _ZN4List10getCounterEv called 0 returned 0% blocks executed 0%
+    #####:   32:void List::getCounter() {
+        -:   33:    LARGE_INTEGER li;
+    #####:   34:    QueryPerformanceCounter(&li);
+    %%%%%:   34-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   35:    cout << endl;
+    %%%%%:   35-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   36:    cout << "Operacja zajela: " << (li.QuadPart - counterStart) / PCFreq << " milisekund\n" << endl;
+    %%%%%:   36-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   36-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    %%%%%:   36-block  2
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+    %%%%%:   36-block  3
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   37:}
+    %%%%%:   37-block  0
+        -:   38:
+function _ZN4List7displayEv called 0 returned 0% blocks executed 0%
+    #####:   39:void List::display() {
+    #####:   40:    if(head == NULL) cout << "Lista jest pusta" << endl;
+    %%%%%:   40-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   40-block  1
+call    2 never executed
+call    3 never executed
+        -:   41:    else
+        -:   42:    {
+        -:   43:        ElemList *elem;
+    #####:   44:        elem = head;
+    #####:   45:        while (elem != NULL)
+    %%%%%:   45-block  0
+    %%%%%:   45-block  1
+branch  0 never executed
+branch  1 never executed
+        -:   46:        {
+    #####:   47:            cout<< elem -> data << " ";
+    %%%%%:   47-block  0
+call    0 never executed
+call    1 never executed
+    #####:   48:            elem = elem -> next;
+        -:   49:        }
+    #####:   50:        cout << endl;
+    %%%%%:   50-block  0
+call    0 never executed
+    #####:   51:        delete elem;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   51-block  0
+call    2 never executed
+        -:   52:    }
+    #####:   53:    cout << endl;
+    %%%%%:   53-block  0
+call    0 never executed
+    #####:   54:    showReverse();
+call    0 never executed
+    #####:   55:}
+        -:   56:
+function _ZN4List13searchUtilityEi called 0 returned 0% blocks executed 0%
+    #####:   57:ElemList * List::searchUtility(int searchedNumber) {
+        -:   58:    ElemList * elem;
+    #####:   59:    elem = head;
+    #####:   60:    for (int i = 0; i < numberOfElements ; i++){
+    %%%%%:   60-block  0
+    %%%%%:   60-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:   61:        if(elem -> data == searchedNumber){return elem;}
+    %%%%%:   61-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:   61-block  1
+    #####:   62:        elem = elem -> next;
+    %%%%%:   62-block  0
+        -:   63:    }
+    #####:   64:    return NULL;
+    %%%%%:   64-block  0
+        -:   65:}
+        -:   66:
+function _ZN4List25fillElementsTakenFromFileENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   67:void List::fillElementsTakenFromFile(string fileName)
+        -:   68:{
+    #####:   69:    string s;
+    %%%%%:   69-block  0
+call    0 never executed
+    #####:   70:    ifstream plik(fileName);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   71:    if (!plik)
+    %%%%%:   71-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   71-block  1
+branch  3 never executed
+branch  4 never executed
+        -:   72:    {
+    #####:   73:        cout << "Nie udalo sie otworzyc pliku" << endl;
+    %%%%%:   73-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   73-block  1
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   74:        return;
+    %%%%%:   74-block  0
+        -:   75:    }
+    #####:   76:    getline(plik, s);
+    %%%%%:   76-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   77:    int numberOfElementsFromFile = atoi(s.c_str());
+    %%%%%:   77-block  0
+call    0 never executed
+call    1 never executed
+        -:   78:    {
+        -:   79:
+    #####:   80:        while (!plik.eof())
+    %%%%%:   80-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   80-block  1
+branch  3 never executed
+branch  4 never executed
+    #####:   81:        if (numberOfElements  < numberOfElementsFromFile)
+    %%%%%:   81-block  0
+branch  0 never executed
+branch  1 never executed
+        -:   82:        {
+    #####:   83:            getline(plik, s);
+    %%%%%:   83-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   84:            int val = atoi(s.c_str());
+    %%%%%:   84-block  0
+call    0 never executed
+call    1 never executed
+    #####:   85:            addAtTheEnd(val);
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   86:        }
+    #####:   87:        else break;
+    %%%%%:   87-block  0
+        -:   88:    }
+    #####:   89:    plik.close();
+    %%%%%:   89-block  0
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   90:
+    #####:   91:}
+    %%%%%:   91-block  0
+    %%%%%:   91-block  1
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    %%%%%:   91-block  2
+    %%%%%:   91-block  3
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    $$$$$:   91-block  4
+call    6 never executed
+    $$$$$:   91-block  5
+call    7 never executed
+        -:   92:
+function _ZN4List11addAtTheEndEi called 0 returned 0% blocks executed 0%
+    #####:   93:void List::addAtTheEnd(int val) {
+    #####:   94:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:   95:    startCounter(); // CZAS START
+    %%%%%:   95-block  0
+call    0 never executed
+    #####:   96:    if (head == NULL){
+branch  0 never executed
+branch  1 never executed
+    #####:   97:        ElemList *listHead = new ElemList;
+    %%%%%:   97-block  0
+call    0 never executed
+    #####:   98:        listHead -> next = NULL;
+    #####:   99:        listHead -> prev = NULL;
+    #####:  100:        listHead -> data = val;
+    #####:  101:        head = listHead;
+    #####:  102:        tail = head;
+    #####:  103:        numberOfElements++;
+    #####:  104:        return;
+        -:  105:    }
+        -:  106:
+    #####:  107:    ElemList *p = new ElemList;
+    %%%%%:  107-block  0
+call    0 never executed
+    #####:  108:    p -> data = val;
+    #####:  109:    p -> prev = tail;
+    #####:  110:    p -> next = NULL;
+    #####:  111:    tail -> next = p;
+    #####:  112:    tail = p;
+    #####:  113:    numberOfElements++;
+    #####:  114:    getCounter(); // CZAS STOP
+call    0 never executed
+        -:  115:}
+        -:  116:
+function _ZN4List17addAtTheBeginningEi called 0 returned 0% blocks executed 0%
+    #####:  117:void List::addAtTheBeginning(int val) {
+    #####:  118:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:  119:    startCounter(); // CZAS START
+    %%%%%:  119-block  0
+call    0 never executed
+    #####:  120:    ElemList *elemList = new ElemList;
+call    0 never executed
+    #####:  121:    elemList -> next = head;
+    #####:  122:    elemList -> prev = NULL;
+    #####:  123:    if (head) {head -> prev = elemList;}
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  123-block  0
+    #####:  124:    head = elemList;
+    #####:  125:    if (!tail) {tail = head;}
+    %%%%%:  125-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  125-block  1
+    #####:  126:    elemList -> data = val;
+    #####:  127:    numberOfElements++;
+    #####:  128:    getCounter(); // CZAS STOP
+    %%%%%:  128-block  0
+call    0 never executed
+    #####:  129:}
+        -:  130:
+function _ZN4List19removeFromBeginningEv called 0 returned 0% blocks executed 0%
+    #####:  131:void List::removeFromBeginning() {
+    #####:  132:    if (head == NULL)
+    %%%%%:  132-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  133:    {
+    #####:  134:        cout << "Lista nie posiada elementow do usuniecia"<< endl;
+    %%%%%:  134-block  0
+call    0 never executed
+call    1 never executed
+    #####:  135:        return;
+        -:  136:    }
+    #####:  137:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:  138:    startCounter(); // CZAS START
+    %%%%%:  138-block  0
+call    0 never executed
+        -:  139:    ElemList *elemList;
+    #####:  140:    elemList = head;
+    #####:  141:    head = head -> next;
+    #####:  142:    head -> prev = NULL;
+    #####:  143:    delete elemList;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  143-block  0
+call    2 never executed
+    #####:  144:    numberOfElements--;
+    #####:  145:    getCounter(); // CZAS STOP
+    %%%%%:  145-block  0
+call    0 never executed
+        -:  146:}
+        -:  147:
+function _ZN4List13removeFromEndEv called 0 returned 0% blocks executed 0%
+    #####:  148:void List::removeFromEnd() {
+    #####:  149:    if (tail == NULL)
+    %%%%%:  149-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  150:    {
+    #####:  151:        cout << "Lista nie posiada elementow do usuniecia"<< endl;
+    %%%%%:  151-block  0
+call    0 never executed
+call    1 never executed
+    #####:  152:        return;
+        -:  153:    }
+    #####:  154:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:  155:    startCounter(); // CZAS START
+    %%%%%:  155-block  0
+call    0 never executed
+        -:  156:    ElemList *elemList;
+    #####:  157:    elemList = tail;
+    #####:  158:    tail = tail -> prev;
+    #####:  159:    tail -> next = NULL;
+    #####:  160:    delete elemList;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  160-block  0
+call    2 never executed
+    #####:  161:    numberOfElements--;
+    #####:  162:    getCounter(); // CZAS STOP
+    %%%%%:  162-block  0
+call    0 never executed
+        -:  163:}
+        -:  164:
+function _ZN4List6removeEi called 0 returned 0% blocks executed 0%
+    #####:  165:void List::remove(int keyToRemove) {
+    #####:  166:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:  167:    startCounter(); // CZAS START
+    %%%%%:  167-block  0
+call    0 never executed
+        -:  168:    ElemList * elemToRemove;
+        -:  169:    ElemList *elemPrev, *elemNext;
+    #####:  170:    elemToRemove = searchUtility(keyToRemove);
+call    0 never executed
+        -:  171:
+    #####:  172:    if(elemToRemove == NULL)
+branch  0 never executed
+branch  1 never executed
+        -:  173:    {
+    #####:  174:        cout << "Taka wartosc nie znajduje sie w tablicy!" << endl;
+    %%%%%:  174-block  0
+call    0 never executed
+call    1 never executed
+    #####:  175:        return;
+        -:  176:    }
+    #####:  177:    elemPrev = elemToRemove -> prev;
+    #####:  178:    elemNext = elemToRemove -> next;
+    #####:  179:    if (elemPrev != NULL) elemPrev -> next = elemNext;
+    %%%%%:  179-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  179-block  1
+    #####:  180:    else head = elemNext;
+    %%%%%:  180-block  0
+    #####:  181:    if (elemNext != NULL) elemNext -> prev = elemPrev;
+    %%%%%:  181-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  181-block  1
+    #####:  182:    else tail = tail -> prev;
+    %%%%%:  182-block  0
+        -:  183:
+    #####:  184:    delete elemToRemove;
+    %%%%%:  184-block  0
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  184-block  1
+call    2 never executed
+    #####:  185:    numberOfElements--;
+    #####:  186:    getCounter(); // CZAS STOP
+    %%%%%:  186-block  0
+call    0 never executed
+        -:  187:}
+        -:  188:
+function _ZN4List4findEi called 0 returned 0% blocks executed 0%
+    #####:  189:bool List::find(int searchedNumber) {
+    #####:  190:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:  191:    startCounter(); // CZAS START
+    %%%%%:  191-block  0
+call    0 never executed
+    #####:  192:    if (searchUtility(searchedNumber) == NULL)
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:  193:    {
+    #####:  194:        getCounter(); // CZAS STOP
+    %%%%%:  194-block  0
+call    0 never executed
+    #####:  195:        return false;
+        -:  196:    }
+    #####:  197:    getCounter(); // CZAS STOP
+    %%%%%:  197-block  0
+call    0 never executed
+    #####:  198:    return true;
+        -:  199:}
+        -:  200:
+function _ZN4List14randomFillListEi called 0 returned 0% blocks executed 0%
+    #####:  201:void List::randomFillList(int amountOfElements)
+        -:  202:{
+    #####:  203:        for (int i = 1; i <= amountOfElements; i++)
+    %%%%%:  203-block  0
+    %%%%%:  203-block  1
+branch  0 never executed
+branch  1 never executed
+    #####:  204:            addAtTheBeginning((rand() % 2000) - 1000);
+    %%%%%:  204-block  0
+call    0 never executed
+call    1 never executed
+    #####:  205:}
+        -:  206:
+function _ZN4List11showReverseEv called 0 returned 0% blocks executed 0%
+    #####:  207:void List::showReverse() {
+        -:  208:    ElemList *elem;
+    #####:  209:    elem = tail;
+    #####:  210:    while (elem != NULL)
+    %%%%%:  210-block  0
+    %%%%%:  210-block  1
+branch  0 never executed
+branch  1 never executed
+        -:  211:    {
+    #####:  212:        cout << elem -> data << " ";
+    %%%%%:  212-block  0
+call    0 never executed
+call    1 never executed
+    #####:  213:        elem = elem -> prev;
+        -:  214:    }
+    #####:  215:    cout << endl;
+    %%%%%:  215-block  0
+call    0 never executed
+    #####:  216:    delete elem;
+branch  0 never executed
+branch  1 never executed
+    %%%%%:  216-block  0
+call    2 never executed
+    #####:  217:}
+        -:  218:
+function _ZN4List13addAtTheIndexEii called 0 returned 0% blocks executed 0%
+    #####:  219:void List::addAtTheIndex(int val, int index) {
+    #####:  220:    if(index == 0)
+    %%%%%:  220-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  221:    {
+    #####:  222:        addAtTheBeginning(val);
+    %%%%%:  222-block  0
+call    0 never executed
+    #####:  223:        return;
+        -:  224:    }
+    #####:  225:    if (index == numberOfElements)
+    %%%%%:  225-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  226:    {
+    #####:  227:        addAtTheEnd(val);
+    %%%%%:  227-block  0
+call    0 never executed
+    #####:  228:        return;
+        -:  229:    }
+    #####:  230:    if (index > numberOfElements)
+    %%%%%:  230-block  0
+branch  0 never executed
+branch  1 never executed
+        -:  231:    {
+    #####:  232:        cout <<endl << "Index znajduje sie poza lista!" << endl;
+    %%%%%:  232-block  0
+call    0 never executed
+call    1 never executed
+call    2 never executed
+    #####:  233:        return;
+        -:  234:    }
+    #####:  235:    counterStart = 0; // NASTAWIAM LICZNIK
+    #####:  236:    startCounter(); // CZAS START
+    %%%%%:  236-block  0
+call    0 never executed
+    #####:  237:    ElemList *elemToAdd = new ElemList;
+call    0 never executed
+    #####:  238:    elemToAdd -> data = val;
+        -:  239:    ElemList *elemPrev;
+        -:  240:    ElemList *elemNext;
+    #####:  241:    elemPrev = head;
+    #####:  242:    for (int i = 1; i < index; ++i) {
+    %%%%%:  242-block  0
+branch  0 never executed
+branch  1 never executed
+    #####:  243:        elemPrev = elemPrev -> next;
+    %%%%%:  243-block  0
+        -:  244:    }
+    #####:  245:    elemNext = elemPrev -> next;
+    #####:  246:    elemPrev -> next = elemToAdd;
+    #####:  247:    elemNext -> prev = elemToAdd;
+    #####:  248:    elemToAdd -> prev = elemPrev;
+    #####:  249:    elemToAdd -> next = elemNext;
+    #####:  250:    numberOfElements++;
+    #####:  251:    getCounter(); // CZAS STOP
+    %%%%%:  251-block  0
+call    0 never executed
+        -:  252:}
+        -:  253:
