@@ -234,7 +234,7 @@ void menu_tree()
         cin>>opt;
         cin.sync();
         switch (opt){
-            case '1': //tutaj wczytytwanie  kopca z pliku
+            case '1': //tutaj wczytytwanie  drzewa z pliku
                 bst -> ~BinarySearchTree();
                 bst = new BinarySearchTree;
                 cout << " Podaj nazwe zbioru:";
@@ -243,21 +243,21 @@ void menu_tree()
                 bst->display();
                 break;
 
-            case '2': //tutaj usuwanie elemenu z kopca
+            case '2': //tutaj usuwanie elemenu z drzewa
                 cout << " podaj wartosc";
                 cin >> value;
                 bst->remove(value);
                 bst->display();
                 break;
 
-            case '3': //tutaj dodawanie elemetu do kopca
+            case '3': //tutaj dodawanie elemetu do drzewa
                 cout << " podaj wartosc:";
                 cin >> value;
                 bst->addNode(value);
                 bst->display();
                 break;
 
-            case '4': //tutaj znajdowanie elemetu w kopca
+            case '4': //tutaj znajdowanie elemetu w drzewa
                 cout << " podaj wartosc: \n";
                 cin >> value;
                 if (bst->findKey(value))
@@ -266,7 +266,7 @@ void menu_tree()
                     cout << "podanej wartosci NIE ma w drzewie \n";
                 break;
 
-            case '5':  //tutaj generowanie  kopca
+            case '5':  //tutaj generowanie  drzewa
                 bst -> ~BinarySearchTree();
                 bst = new BinarySearchTree;
                 cout << "Podaj ilosc elementów tablicy:";
@@ -275,7 +275,7 @@ void menu_tree()
                 bst->display();
                 break;
 
-            case '6':  //tutaj wyświetlanie kopca
+            case '6':  //tutaj wyświetlanie drzewa
                 bst->display();
                 break;
 
@@ -324,8 +324,8 @@ int main() {
         } while (option != '0');
     }
     if (isTest){
-//        TestMenu *testMenu = new TestMenu;
-//        testMenu->startedMenu();
+        TestMenu *testMenu = new TestMenu;
+        testMenu->startedMenu();
     }
     return 0;
 }

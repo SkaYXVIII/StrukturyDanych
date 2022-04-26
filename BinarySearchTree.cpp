@@ -30,7 +30,7 @@ BinarySearchTree::BinarySearchTree() {
 
 BinarySearchTree::~BinarySearchTree() {
     numberOfElements = 0;
-    deleteTree(root); // one by one
+    deleteTree(root);
 }
 
 void BinarySearchTree::deleteTree(Node *node) {
