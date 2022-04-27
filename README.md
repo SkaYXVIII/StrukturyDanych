@@ -1,5 +1,5 @@
 # StrukturyDanych
-Projekt in which I use my own implementation od data structures to measure time of operations on them.
+Projekt in which I use my own implementation of data structures to measure time of operations on them.
 
 Operations:
 - add value
